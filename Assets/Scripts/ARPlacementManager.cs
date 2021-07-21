@@ -17,8 +17,6 @@ public class ARPlacementManager : MonoBehaviour
     private ARAnchorManager aRAnchorManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private bool objectIsSpawned = false;
-    public GameObject shoot;
-
     public GameObject time;
 
     void Awake()
@@ -50,10 +48,8 @@ public class ARPlacementManager : MonoBehaviour
                         Debug.Log("Plane");
                         objectIsSpawned = true;
                         var hitPose = hits[0].pose;
-                        
-                        GameObject instantiatedPrefab = Instantiate(prefab, hitPose.position, hitPose.rotation);
-                        
-
+                        prefab.SetActive(true);
+                        prefab.transform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
                         Debug.Log("Successful Cube");
 
                         foreach (ARPlane aRPlane in aRPlaneManager.trackables)
@@ -61,11 +57,8 @@ public class ARPlacementManager : MonoBehaviour
                             aRPlane.gameObject.SetActive(false);
                         }
                         Destroy(aRPlaneManager);
-                        OnObjectSpawned.Invoke(hitPose.position);
-
-
+                        OnObjectSpawned?.Invoke(hitPose.position);
                         Debug.Log("Shoot Object Active");
-                        shoot.SetActive(true);
                         time.SetActive(true);
                         return;
                     }

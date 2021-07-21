@@ -175,9 +175,10 @@ GameObject:
   - component: {fileID: 1595143521735104301}
   - component: {fileID: 1595143521728182477}
   - component: {fileID: 7642789646738818716}
-  - component: {fileID: 692328907}
+  - component: {fileID: 7800784928012950997}
+  - component: {fileID: -788120385996706282}
   m_Layer: 0
-  m_Name: GermSlime
+  m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,12 +227,12 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595143521735461645}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 1.89, z: 0}
---- !u!114 &692328907
+--- !u!114 &7800784928012950997
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,10 +241,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1595143521735461645}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59284d6d36cd7314ca925452e7301166, type: 3}
+  m_Script: {fileID: 11500000, guid: a590873be6e036545bf0739a3b21818a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 15
+  destroyExplosion: {fileID: 1240250018707908, guid: 5656e7ea1f1a75d4c895547ec2b824b3,
+    type: 3}
+  pointsOnEnemyDestroy: 1
+--- !u!114 &-788120385996706282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595143521735461645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71979f431aa5ee645a444c67a595a2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEnemySelected: 0
 --- !u!1 &1595143521735461649
 GameObject:
   m_ObjectHideFlags: 0

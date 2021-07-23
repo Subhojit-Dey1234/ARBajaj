@@ -12,23 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
   m_Name: Readme
   m_EditorClassIdentifier: 
-  icon: {fileID: 2800000, guid: 508303af6d2f46a4aac6b9ae13339531, type: 3}
-  title: 'Creator Kit: FPS'
+  icon: {fileID: 2800000, guid: 5affe27dad942bc4c9f76348faeb0abe, type: 3}
+  title: 'VR Beginner: The Escape Room'
   sections:
-  - heading: What is a Creator Kit?
-    text: "Creator Kits are short step-by-step tutorials that don\u2019t require code
-      for complete beginners to gain a good understanding of Unity in less than an
-      hour."
+  - heading: What is this project?
+    text: "This beginner VR project introduces users to interacting with different
+      elements of VR. Work with assets in a prototype scene and experience an escape
+      room environment we\u2019ve created for you. "
     linkText: 
     url: 
   - heading: How do I use it?
-    text: We've written a detailed manual that explores all the available prefabs
-      and components that make up the mechanics in this kit. You can find the manual
-      on our Learn site.
+    text: "We\u2019ve written detailed tutorials that explore the project step by
+      step. You can find them on our Learn site. Use the project in the Unity editor
+      alongside the learning materials. "
     linkText: Read the manual
-    url: https://learn.unity.com/project/creator-kit-fps
+    url: https://learn.unity.com/project/vr-beginner-the-escape-room
   - heading: Got feedback?
-    text: 'Let us know what you think or ask any questions you might have on our FORUM. '
+    text: 'Let us know what you think or ask any questions you might have on our
+      forum. '
     linkText: Forum Thread
-    url: https://forum.unity.com/threads/creator-kit-fps.693352/
+    url: https://forum.unity.com/threads/new-vr-beginner-escape-room.834769/
   loadedLayout: 1

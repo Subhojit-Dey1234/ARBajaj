@@ -62,3 +62,21 @@ MonoBehaviour:
     loop: 0
     name: Die_Enemy3
     source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: aacbfc1a01bfe7c4aa0bec0534e5acc4, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: Point_Audio
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 1c24b6c5831bb514099ff4b9b9652bc3, type: 3}
+    volume: 0.476
+    pitch: 1
+    loop: 0
+    name: Timer_Start
+    source: {fileID: 0}
+  - clip: {fileID: 8300000, guid: 40a4a1ec4c1c2da42b802c5777f37a9e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    name: Timer_Stop
+    source: {fileID: 0}

@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class UpdateScore : MonoBehaviour
 {
     private Text scoreText;
+    private Animator animator;
     void Awake()
     {
         scoreText = gameObject.GetComponent<Text>();
+        animator = gameObject.GetComponentInChildren<Animator>();
         scoreText.text = "0";
     }
 
@@ -25,5 +27,7 @@ public class UpdateScore : MonoBehaviour
     private void UpdateScoreOnEnemyDestroyed(int pointsOnSingleHit)
     {
         scoreText.text = (Int32.Parse(scoreText.text) + pointsOnSingleHit).ToString();
+        animator.SetBool("PlayCoinAnimation",true);
+        AudioManager.Instance.PlaySoundOneShot("Point_Audio");
     }
 }

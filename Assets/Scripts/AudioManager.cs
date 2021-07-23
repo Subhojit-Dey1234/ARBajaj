@@ -48,6 +48,33 @@ public class AudioManager : MonoBehaviour
         }
 
     }
+    public void StopSound(string clipName)
+    {
+        var audio = sounds.First(s => s.name.Equals(clipName));
+        if (audio == null)
+        {
+            Debug.LogWarning("Sound Does not exist");
+        }
+        else
+        {
+                audio.source.Stop();
+            
+        }
+
+    }
+    public void PlaySoundOneShot(string clipName)
+    {
+        var audio = sounds.First(s => s.name.Equals(clipName));
+        if (audio == null)
+        {
+            Debug.LogWarning("Sound Does not exist");
+        }
+        else
+        {
+            audio.source.PlayOneShot(audio.source.clip,1f);
+        }
+
+    }
     private void OnDestroy()
     {
         applicationIsQuitting = true;

@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TImer : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     // Start is called before the first frame update
     public float time;
     bool isTimerRunning = true;
-    void Start()
+    private Animator timer;
+    private bool stoppingSoundPlayed = false;
+    private void Awake()
     {
-        
+        timer = GetComponent<Animator>();
+    }
+    void OnEnable()
+    {
+        timer.SetBool("StartTimer", true);
+        AudioManager.Instance.PlaySound("Timer_Start");
+    }
+    void TimerStopped()
+    {
+        timer.SetBool("StartTimer", false);
     }
 
     // Update is called once per frame
@@ -23,15 +34,21 @@ public class TImer : MonoBehaviour
             isTimerRunning = false;
         }
 
-        if(isTimerRunning){
-        
-        time = time - Time.deltaTime;
-        int secondTime = (int) time % 60;
-        gameObject.GetComponent<Text>().text = "0:0" +  secondTime.ToString();
+        if (isTimerRunning)
+        {
+
+            time -= Time.deltaTime;
         }
         else
         {
-            gameObject.GetComponent<Text>().text = "Game Over";
+            
+            timer.SetBool("StartTimer", false);
+            AudioManager.Instance.StopSound("Timer_Start");
+            if(stoppingSoundPlayed == false)
+            {
+                AudioManager.Instance.PlaySound("Timer_Stop");
+                stoppingSoundPlayed = true;
+            }
         }
     }
 }

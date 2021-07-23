@@ -4,7 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ignite
+=======
+  - Enemy
+  - ARPlane
+  - Purifier
+>>>>>>> 159aff8... Update
   layers:
   - Default
   - TransparentFX
